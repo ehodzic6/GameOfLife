@@ -6,5 +6,6 @@ namespace GameOfLife.Repositories
     {
         public Response AddHuman(Human human);
         public Response DeleteHuman(string humanId);
+        public Response DoEngineering(string humanId);
     }
 }

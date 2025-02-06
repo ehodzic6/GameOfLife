@@ -66,5 +66,29 @@ namespace GameOfLife.Controllers
                 });
             }
         }
+
+        [HttpPost("DoEngineering")]
+        public async Task<IActionResult> DoEngineering(string humanId)
+        {
+            Response response = _repository.DoEngineering(humanId);
+            if (response.Success)
+            {
+                return Ok(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+        }
     }
 }
