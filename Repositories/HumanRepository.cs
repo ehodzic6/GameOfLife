@@ -22,5 +22,31 @@ namespace GameOfLife.Repositories
                 Description = human.Id.ToString()
             };
         }
+
+        public Response DeleteHuman(string humanId)
+        {
+            Human? human = _context.Set<Human>().Find(Guid.Parse(humanId));
+
+            if (human != null)
+            {
+                _context.Set<Human>().Remove(human);
+                _context.SaveChangesAsync();
+                return new Response
+                {
+                    Success = true,
+                    Message = "Human is deleted!",
+                    Description = ""
+                };
+            }
+            else
+            {
+                return new Response
+                {
+                    Success = false,
+                    Message = "Human is not found!",
+                    Description = "Check Id!"
+                };
+            }
+        }
     }
 }

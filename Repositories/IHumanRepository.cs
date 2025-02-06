@@ -5,5 +5,6 @@ namespace GameOfLife.Repositories
     public interface IHumanRepository
     {
         public Response AddHuman(Human human);
+        public Response DeleteHuman(string humanId);
     }
 }

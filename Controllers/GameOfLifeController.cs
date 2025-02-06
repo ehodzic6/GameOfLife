@@ -42,5 +42,29 @@ namespace GameOfLife.Controllers
                 });
             }
         }
+
+        [HttpDelete("DeleteHuman")]
+        public async Task<IActionResult> DeleteHuman(string humanId)
+        {
+            Response response = _repository.DeleteHuman(humanId);
+            if (response.Success)
+            {
+                return Ok(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+        }
     }
 }
