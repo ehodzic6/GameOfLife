@@ -90,5 +90,126 @@ namespace GameOfLife.Controllers
                 });
             }
         }
+
+        [HttpPost("GoToSleep")]
+        public async Task<IActionResult> GoToSleep(string humanId)
+        {
+            Response response = _repository.GoToSleep(humanId);
+            if (response.Success)
+            {
+                return Ok(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+        }
+
+        [HttpPost("Eat")]
+        public async Task<IActionResult> Eat(string humanId)
+        {
+            Response response = _repository.Eat(humanId);
+            if (response.Success)
+            {
+                return Ok(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+        }
+
+        [HttpPost("PlayPS5")]
+        public async Task<IActionResult> PlayPS5(string humanId)
+        {
+            Response response = _repository.PlayPS5(humanId);
+            if (response.Success)
+            {
+                return Ok(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+        }
+
+        [HttpPost("ReadABook")]
+        public async Task<IActionResult> ReadABook(string humanId)
+        {
+            Response response = _repository.ReadABook(humanId);
+            if (response.Success)
+            {
+                return Ok(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+        }
+
+        [HttpPost("FitnessTraining")]
+        public async Task<IActionResult> FitnessTraining(string humanId)
+        {
+            Response response = _repository.FitnessTraining(humanId);
+            if (response.Success)
+            {
+                return Ok(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    Success = response.Success,
+                    Message = response.Message,
+                    Description = response.Description
+                });
+            }
+        }
+
     }
 }
