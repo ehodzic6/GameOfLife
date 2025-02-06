@@ -1,4 +1,4 @@
-﻿namespace LifeGame.Models
+﻿namespace GameOfLife.Models
 {
     public class Human
     {
