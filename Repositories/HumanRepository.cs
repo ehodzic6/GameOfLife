@@ -19,7 +19,8 @@ namespace GameOfLife.Repositories
             {
                 Success = true,
                 Message = "Human added succesfully!",
-                Description = human.Id.ToString()
+                Description = human.Id.ToString(),
+                Human = human
             };
         }
 
@@ -70,6 +71,7 @@ namespace GameOfLife.Repositories
 
             if (human != null)
             {
+                var human1 = human;
                 Random random = new Random();
                 double coefficient = random.NextDouble();
                 human.Engineering += coefficient * 25;
@@ -93,7 +95,8 @@ namespace GameOfLife.Repositories
                     {
                         Success = false,
                         Message = "You don't have enough stats for this activity!",
-                        Description = "Hint: Change activity!"
+                        Description = "Hint: Change activity!",
+                        Human = human1
                     };
                 }
                 human.Engineering = engineering;
@@ -107,7 +110,8 @@ namespace GameOfLife.Repositories
                 {
                     Success = true,
                     Message = "Human successfully finished an activity!",
-                    Description = "Engineering: " + Math.Round(human.Engineering, 2)
+                    Description = "Engineering: " + Math.Round(human.Engineering, 2),
+                    Human = human
                 };
             }
             else
@@ -128,6 +132,7 @@ namespace GameOfLife.Repositories
 
             if (human != null)
             {
+                var human1 = human;
                 Random random = new Random();
                 double coefficient = random.NextDouble();
                 human.Hunger += coefficient * 50;
@@ -151,7 +156,8 @@ namespace GameOfLife.Repositories
                     {
                         Success = false,
                         Message = "You don't have enough stats for this activity!",
-                        Description = "Hint: Change activity!"
+                        Description = "Hint: Change activity!",
+                        Human = human1
                     };
                 }
                 human.Engineering = engineering;
@@ -165,7 +171,8 @@ namespace GameOfLife.Repositories
                 {
                     Success = true,
                     Message = "Human successfully finished an activity!",
-                    Description = "Hunger: " + Math.Round(human.Hunger, 2)
+                    Description = "Hunger: " + Math.Round(human.Hunger, 2),
+                    Human = human
                 };
             }
             else
@@ -184,6 +191,7 @@ namespace GameOfLife.Repositories
 
             Human? human = _context.Set<Human>().Find(Guid.Parse(humanId));
 
+            var human1 = human;
             if (human != null)
             {
                 Random random = new Random();
@@ -210,7 +218,8 @@ namespace GameOfLife.Repositories
                     {
                         Success = false,
                         Message = "You don't have enough stats for this activity!",
-                        Description = "Hint: Change activity!"
+                        Description = "Hint: Change activity!",
+                        Human = human1
                     };
                 }
                 human.Engineering = engineering;
@@ -224,7 +233,8 @@ namespace GameOfLife.Repositories
                 {
                     Success = true,
                     Message = "Human successfully finished an activity!",
-                    Description = "Fitness: " + Math.Round(human.Fitness, 2)
+                    Description = "Fitness: " + Math.Round(human.Fitness, 2),
+                    Human = human
                 };
             }
             else
@@ -243,6 +253,7 @@ namespace GameOfLife.Repositories
 
             Human? human = _context.Set<Human>().Find(Guid.Parse(humanId));
 
+            var human1 = human;
             if (human != null)
             {
                 Random random = new Random();
@@ -268,7 +279,8 @@ namespace GameOfLife.Repositories
                     {
                         Success = false,
                         Message = "You don't have enough stats for this activity!",
-                        Description = "Hint: Change activity!"
+                        Description = "Hint: Change activity!",
+                        Human = human1
                     };
                 }
                 human.Engineering = engineering;
@@ -282,7 +294,8 @@ namespace GameOfLife.Repositories
                 {
                     Success = true,
                     Message = "Human successfully finished an activity!",
-                    Description = "Fun: " + Math.Round(human.Fun, 2)
+                    Description = "Fun: " + Math.Round(human.Fun, 2),
+                    Human = human
                 };
             }
             else
@@ -300,6 +313,7 @@ namespace GameOfLife.Repositories
         {
 
             Human? human = _context.Set<Human>().Find(Guid.Parse(humanId));
+            var human1 = human;
 
             if (human != null)
             {
@@ -327,7 +341,8 @@ namespace GameOfLife.Repositories
                     {
                         Success = false,
                         Message = "You don't have enough stats for this activity!",
-                        Description = "Hint: Change activity!"
+                        Description = "Hint: Change activity!",
+                        Human = human1
                     };
                 }
                 human.Engineering = engineering;
@@ -341,7 +356,8 @@ namespace GameOfLife.Repositories
                 {
                     Success = true,
                     Message = "Human successfully finished an activity!",
-                    Description = "Brain capacity: " + Math.Round(human.BrainCapacity, 2)
+                    Description = "Brain capacity: " + Math.Round(human.BrainCapacity, 2),
+                    Human = human
                 };
             }
             else
@@ -358,7 +374,7 @@ namespace GameOfLife.Repositories
         public Response FitnessTraining(string humanId)
         {
             Human? human = _context.Set<Human>().Find(Guid.Parse(humanId));
-
+            var human1 = human;
             if (human != null)
             {
                 Random random = new Random();
@@ -385,7 +401,8 @@ namespace GameOfLife.Repositories
                     {
                         Success = false,
                         Message = "You don't have enough stats for this activity!",
-                        Description = "Hint: Change activity!"
+                        Description = "Hint: Change activity!",
+                        Human = human1
                     };
                 }
                 human.Engineering = engineering;
@@ -399,7 +416,8 @@ namespace GameOfLife.Repositories
                 {
                     Success = true,
                     Message = "Human successfully finished an activity!",
-                    Description = "Fitness: " + Math.Round(human.Fitness, 2)
+                    Description = "Fitness: " + Math.Round(human.Fitness, 2),
+                    Human = human
                 };
             }
             else

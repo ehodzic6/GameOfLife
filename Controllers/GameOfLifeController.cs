@@ -29,7 +29,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -38,7 +39,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
@@ -53,7 +55,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -62,7 +65,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
@@ -77,7 +81,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -86,7 +91,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
@@ -101,7 +107,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -110,7 +117,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
@@ -125,7 +133,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -134,7 +143,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
@@ -149,7 +159,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -158,7 +169,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
@@ -173,7 +185,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -182,7 +195,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
@@ -197,7 +211,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
             else
@@ -206,7 +221,8 @@ namespace GameOfLife.Controllers
                 {
                     Success = response.Success,
                     Message = response.Message,
-                    Description = response.Description
+                    Description = response.Description,
+                    Human = response.Human
                 });
             }
         }
